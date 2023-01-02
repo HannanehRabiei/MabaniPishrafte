@@ -2,6 +2,7 @@ import static java.lang.System.out;
 
 public class CarTest {
 
+
     class car{
         // Dade :
             boolean AyaMashinRoshanAst;
@@ -10,28 +11,28 @@ public class CarTest {
 
 
         // Tabe(Method) :
-        public void roshan ;{
+         void roshan (){
             out.println("mashin roshan ast");
             AyaMashinRoshanAst = true;
         }
 
-        public void khamosh;{
+         void khamosh(){
             out.println("mashin khamosh ast");
             AyaMashinRoshanAst = false;
 
         }
 
-        public void bazkardandar;{
+        void bazkardandar(){
             out.println("dar baz ast");
             AyaDarMashinBazAst = true;
         }
 
-        public void bastandar;{
+         void bastandar(){
             out.println("dar baste shod");
             AyaDarMashinBazAst = false;
         }
 
-        public void harkat;{
+         void harkat(){
             // dar baste bashad va mashin roshan bashad (rule)
         if (!AyaDarMashinBazAst && AyaMashinRoshanAst)
         {
