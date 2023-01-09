@@ -36,6 +36,7 @@ package Khodro;
         }
         public boolean AyaDarHalHarekatAst(){
             // dar baste bashad va mashin roshan bashad (rule)
+            boolean AyaRoshanAst = false;
             if (!AyaDarBazAst && AyaRoshanAst)
             {
                 return true;
@@ -54,6 +55,9 @@ package Khodro;
     @Override
     public int gonjayeshmashin() {
         return 100;
+    }
+
+    public void roshan() {
     }
 }
 
