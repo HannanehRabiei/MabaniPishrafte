@@ -1,15 +1,18 @@
-package Khodro;
-
+package Khodro.New;
+import Khodro.SandoghDar;
+import Khodro.Gearbox;
+import Khodro.Ranande;
+import Khodro.Khodro;
 
 // mashin yek khodro ast : car is a vehicle
- public class Mashin extends Khodro implements SandoghDar , Gearbox{
+ public class Mashin extends Khodro implements SandoghDar, Gearbox {
 
         // Dade :
-        boolean AyaDarBazAst;
-        String mark;
-        int gonjayeshsandogh;
-        Ranande ranande;
-        String typedande;
+        private boolean AyaDarBazAst;
+        private String mark;
+        private int gonjayeshsandogh;
+        private Ranande ranande;
+        private String typedande;
 
         // constructor
        public Mashin() {
@@ -35,6 +38,7 @@ package Khodro;
             AyaDarBazAst = false;
         }
         public boolean AyaDarHalHarekatAst(){
+            protectedMethod();
             // dar baste bashad va mashin roshan bashad (rule)
             boolean AyaRoshanAst = false;
             if (!AyaDarBazAst && AyaRoshanAst)
@@ -55,6 +59,11 @@ package Khodro;
     @Override
     public int gonjayeshmashin() {
         return 100;
+    }
+
+    @Override
+    public String getmark() {
+        return mark;
     }
 
     public void roshan() {

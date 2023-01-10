@@ -1,5 +1,7 @@
 import Khodro.*;
-import Khodro.Motor;
+
+import Khodro.New.Mashin;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class NamKhodroChapKonTest {
@@ -8,7 +10,8 @@ public class NamKhodroChapKonTest {
         // Given
         Khodro benz = new Mashin("Benz" ,120 , "automatic");
         Khodro volvo = new Mashin("Volvo" ,80 , "dasti");
-        Khodro motor = new Khodro() {
+        Khodro kashti = new Kashti();
+        Khodro motor = new Motor() {
             @Override
             public String typedande() {
                 return null;
@@ -19,10 +22,12 @@ public class NamKhodroChapKonTest {
                 return 0;
             }
         };
-        Khodro[]khodroha={benz , volvo , motor};
+        Khodro[]khodroha={benz , volvo , motor , kashti};
         NamKhodroChapKon namKhodroChapKon = new NamKhodroChapKon(khodroha);
 
         // When
       String Listnamkhodroha=  namKhodroChapKon.execute();
+      // Then
+        Assertions.assertEquals("Benz-Volvo-Motor-kashti" , Listnamkhodroha);
     }
 }

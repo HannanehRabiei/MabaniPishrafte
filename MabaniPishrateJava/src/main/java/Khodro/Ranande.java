@@ -1,5 +1,5 @@
 package Khodro;
 
-class Ranande {
+public class Ranande {
 
 }
