@@ -1,2 +1,2 @@
 # MabaniPishrafte
-Mabani Pishrafte Java dar dore 7Learn
+Mabani Pishrafte Java
