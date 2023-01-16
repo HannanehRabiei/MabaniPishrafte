@@ -5,10 +5,10 @@ import static java.lang.System.out;
 public  class Mashin extends Khodro implements Gearbox,Sandoughdar {
 
     // Dade
-    boolean ayadarmashinbazast;   // default : false
-    String mark;
-    int gonjayeshSandough;
-    String noeDande;
+    private boolean ayadarmashinbazast;   // default : false
+    private String mark;
+    private int gonjayeshSandough;
+    private String noeDande;
     // constructor
    public Mashin(){
         out.println("yek mashin bedone dade sakhte shod");
