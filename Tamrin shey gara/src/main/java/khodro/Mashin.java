@@ -4,7 +4,9 @@ import static java.lang.System.out;
 
 public  class Mashin extends Khodro implements Gearbox,Sandoughdar {
 
+
     // Dade
+    public static int tedadeforosh;
     private boolean ayadarmashinbazast;   // default : false
     private String mark;
     private int gonjayeshSandough;
