@@ -1,9 +1,7 @@
 package calculator;
 import javax.swing.*;
 
-import static java.lang.Double.parseDouble;
-
-public class CalculatorUI{
+public class CalculatorUI {
 
     public static final int WIDTH = 45;
     public static final int HEIGHT = 45;
@@ -12,6 +10,8 @@ public class CalculatorUI{
     private static String minus1;
     private static String multiply1;
     private static String division1;
+    private static String plus1;
+    private static String point1;
 
     public static void main(String... args) {
 
@@ -26,18 +26,16 @@ public class CalculatorUI{
         calculator.add(cancle);
 
         getButton("1", 0, 50, calculator);
-
         getButton("2", 50, 50, calculator);
 
-        getButton("3", 100, 50, calculator);
-
         JButton plus = new JButton("+");
-        plus.setBounds(150,50,WIDTH,HEIGHT);
+        plus.setBounds(150 , 50 , 50 , 50);
         plus.addActionListener(e -> {
-            add1= String.valueOf(parseDouble(jTextField.getText()));
+            plus1=(jTextField.getText());
             jTextField.setText("");
         });
         calculator.add(plus);
+        getButton("3", 100, 50, calculator);
 
         getButton("4", 0, 100, calculator);
 
@@ -48,7 +46,7 @@ public class CalculatorUI{
         JButton minus = new JButton("-");
         minus.setBounds(150,100,WIDTH,HEIGHT);
         minus.addActionListener(e -> {
-            minus1= String.valueOf(parseDouble(jTextField.getText()));
+            minus1= (jTextField.getText());
             jTextField.setText("");
         });
         calculator.add(minus);
@@ -62,13 +60,18 @@ public class CalculatorUI{
         JButton multiply = new JButton("x");
         multiply.setBounds(150,150,WIDTH,HEIGHT);
         multiply.addActionListener(e -> {
-            multiply1=jTextField.getText();
+            multiply1=(jTextField.getText());
             jTextField.setText("");
         });
         calculator.add(multiply);
 
+        JButton point = new JButton(".");
+        point.setBounds(50,200,50,50);
+        point.addActionListener(e -> {
+            point1=jTextField.getText();
+            jTextField.setText(".");
+        });
         getButton(".", 0, 200, calculator);
-
         getButton("0", 50, 200, calculator);
 
         JButton equal = new JButton("=");
@@ -76,12 +79,12 @@ public class CalculatorUI{
 
         equal.addActionListener(e -> {
                     Calculator calculator1 = new Calculator();
-                    String addresult = calculator1.add(String.valueOf(add1), String.valueOf(parseDouble(jTextField.getText())));
+                    String addresult = calculator1.add(add1,jTextField.getText());
                     jTextField.setText(addresult);
                 });
             equal.addActionListener(e -> {
             Calculator calculator2 = new Calculator();
-            String minusResult=calculator2.minus(minus1 , String.valueOf(parseDouble(jTextField.getText())));
+            String minusResult=calculator2.minus(minus1 ,jTextField.getText());
             jTextField.setText(minusResult);
         });
             equal.addActionListener(e -> {
@@ -95,10 +98,11 @@ public class CalculatorUI{
                 jTextField.setText(divisionResult);
             });
         calculator.add(equal);
+
         JButton division = new JButton("/");
         division.setBounds(150,200,WIDTH,HEIGHT);
         division.addActionListener(e -> {
-            division1=jTextField.getText();
+            division1=(jTextField.getText());
             jTextField.setText("");
         });
         calculator.add(division);
