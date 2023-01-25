@@ -21,7 +21,7 @@ public class CalculatorTest {
     @Test
     void Bayad_Do_Adad_Ra_Az_Ham_Kam_Kond() {
         String haselKamKadanDoAdad = calculator.minus("5", "3");
-        assertEquals("15.0", haselKamKadanDoAdad);
+        assertEquals("2.0", haselKamKadanDoAdad);
     }
     @Test
     void Bayad_Do_Adad_Ra_Ba_Ham_Zarb_Kond() {
