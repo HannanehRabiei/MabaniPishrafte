@@ -15,7 +15,7 @@ public class CalculatorTest {
     }
     @Test
     void Bayad_Do_Adad_Ra_Ba_Ham_Jam_Kond() {
-        String haselJamDoAdad = calculator.add("2", "3");
+        String haselJamDoAdad = calculator.plus("2", "3");
         assertEquals("5.0", haselJamDoAdad);
     }
     @Test
