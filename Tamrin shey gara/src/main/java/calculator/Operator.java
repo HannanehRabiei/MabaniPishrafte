@@ -15,40 +15,40 @@ public class Operator {
         });
         return minusButton;
     }
-    public   JButton getPlus(String plus1, JTextField textField) {
-        JButton plus = new JButton("+");
-        plus.setBounds(150, 50, WIDTH, HEIGHT);
-        plus.addActionListener(e -> {
+    public   JButton getPlus(String plus, JTextField textField) {
+        JButton plusButton = new JButton(plus);
+        plusButton.setBounds(150, 50, WIDTH, HEIGHT);
+        plusButton.addActionListener(e -> {
             if (!textField.getText().isEmpty())
                 String.valueOf((textField.getText()));
             textField.setText("");
         });
-        return plus;
+        return plusButton;
     }
-    public  JButton getMultiply(String multiply1, JTextField textField) {
-        JButton multiply = new JButton("x");
-        multiply.setBounds(150, 150, WIDTH, HEIGHT);
-        multiply.addActionListener(e -> {
+    public  JButton getMultiply(String multiply, JTextField textField) {
+        JButton multiplyButton = new JButton(multiply);
+        multiplyButton.setBounds(150, 150, WIDTH, HEIGHT);
+        multiplyButton.addActionListener(e -> {
             if (!textField.getText().isEmpty())
                 String.valueOf((textField.getText()));
             textField.setText("");
         });
-        return multiply;
+        return multiplyButton;
     }
-    public  JButton getDivision(String division1, JTextField textField) {
-        JButton division = new JButton("/");
-        division.setBounds(150, 200, WIDTH, HEIGHT);
-        division.addActionListener(e -> {
+    public  JButton getDivision(String division, JTextField textField) {
+        JButton divisionButton = new JButton(division);
+        divisionButton.setBounds(150, 200, WIDTH, HEIGHT);
+        divisionButton.addActionListener(e -> {
             if (!textField.getText().isEmpty())
                  textField.getText();
             textField.setText("");
         });
-        return division;
+        return divisionButton;
     }
-    public JButton getCancel(JTextField textField) {
-        JButton cancel = new JButton("C");
-        cancel.setBounds(150, 0, WIDTH, HEIGHT);
-        cancel.addActionListener(event -> textField.setText(""));
-        return cancel;
+    public JButton getCancel(String cancle , JTextField textField) {
+        JButton cancelButton = new JButton(cancle);
+        cancelButton.setBounds(150, 0, WIDTH, HEIGHT);
+        cancelButton.addActionListener(event -> textField.setText(""));
+        return cancelButton;
     }
 }

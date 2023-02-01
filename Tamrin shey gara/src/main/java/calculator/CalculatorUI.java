@@ -1,7 +1,5 @@
 package calculator;
-
 import javax.swing.*;
-
 import static java.lang.Double.parseDouble;
 
 public class CalculatorUI {
@@ -9,10 +7,11 @@ public class CalculatorUI {
     public static final int WIDTH = 45;
     public static final int HEIGHT = 45;
     private static JTextField textField;
-    private static String plus1;
+    private static final String PLUS = "+";
+    private static final String CANCLE = "c";
     private static final String MINUS = "-";
-    private static String multiply1;
-    private static String division1;
+    private static final String MULTIPLY = "x";
+    private static final String DIVISION = "/";
 
     public static void main(String... args) {
         Operator operator = new Operator();
@@ -21,14 +20,14 @@ public class CalculatorUI {
         textField.setBounds(0, 0, 150, HEIGHT);
         textField.setEditable(false);
 
-        JButton cancel = operator.getCancel(textField);
+        JButton cancel = operator.getCancel(CANCLE,textField);
         calculatorFrame.add(cancel);
 
         getButton("1", 0, 50, calculatorFrame);
         getButton("2", 50, 50, calculatorFrame);
         getButton("3", 100, 50, calculatorFrame);
 
-        JButton plus = operator.getPlus(plus1, textField);
+        JButton plus = operator.getPlus(PLUS, textField);
         calculatorFrame.add(plus);
 
         getButton("4", 0, 100, calculatorFrame);
@@ -42,7 +41,7 @@ public class CalculatorUI {
         getButton("8", 50, 150, calculatorFrame);
         getButton("9", 100, 150, calculatorFrame);
 
-        JButton multiply = operator.getMultiply(multiply1, textField);
+        JButton multiply = operator.getMultiply(MULTIPLY, textField);
         calculatorFrame.add(multiply);
 
         getButton(".", 0, 200, calculatorFrame);
@@ -53,7 +52,7 @@ public class CalculatorUI {
 
         equal.addActionListener(e -> {
             Calculator calculateSum = new Calculator();
-            String addResult = calculateSum.plus(String.valueOf(plus1), String.valueOf(parseDouble(textField.getText())));
+            String addResult = calculateSum.plus(PLUS, String.valueOf(parseDouble(textField.getText())));
             textField.setText(addResult);
         });
         equal.addActionListener(e -> {
@@ -63,17 +62,17 @@ public class CalculatorUI {
         });
         equal.addActionListener(e -> {
             Calculator calculator3 = new Calculator();
-            String multiplyResult = calculator3.multiply(multiply1, textField.getText());
+            String multiplyResult = calculator3.multiply(MULTIPLY, textField.getText());
             textField.setText(multiplyResult);
         });
          // TODO: 1/31/2023 check equal for division
         equal.addActionListener(e -> {
             Calculator calculator4 = new Calculator();
-            String divisionResult = calculator4.division(division1, textField.getText());
+            String divisionResult = calculator4.division(DIVISION, textField.getText());
             textField.setText(divisionResult);
         });
         calculatorFrame.add(equal);
-        JButton division = operator.getDivision(division1, textField);
+        JButton division = operator.getDivision(DIVISION, textField);
         calculatorFrame.add(division);
 
         calculatorFrame.add(textField);
