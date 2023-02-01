@@ -19,7 +19,6 @@ public class CalculatorUI {
         textField = new JTextField();
         textField.setBounds(0, 0, 150, HEIGHT);
         textField.setEditable(false);
-
         JButton cancel = getCancel(textField);
         calculatorFrame.add(cancel);
 
@@ -79,7 +78,6 @@ public class CalculatorUI {
         calculatorFrame.setLayout(null);
         calculatorFrame.setVisible(true);
     }
-
     private static void getButton(String buttonn, int xPosition, int yPosition, JFrame calculator) {
         JButton button = new JButton(buttonn);
         button.setBounds(xPosition, yPosition, WIDTH, HEIGHT);

@@ -1,7 +1,7 @@
 package calculator;
 import static java.lang.Double.parseDouble;
 
-public class Calculator {
+public class Calculator  {
 
     public String plus(String adad1, String adad2) {
         double d1 = parseDouble(adad1);

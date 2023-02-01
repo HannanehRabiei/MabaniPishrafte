@@ -1,2 +1,2 @@
-# MabaniPishrafte
-Mabani Pishrafte Java
+# Calculator
+Calculator UI
